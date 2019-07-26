@@ -16,11 +16,6 @@ var App = {
     App.fetch(App.stopSpinner);
 
   },
-  // addMessage: function(){
-  //   var message = $('<p class=message></p>');
-
-  //   $('#chat').append(message);
-  // },
 
   fetch: function(callback = ()=>{}) {
     Parse.readAll((data) => {
