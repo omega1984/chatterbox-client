@@ -35,11 +35,13 @@ var App = {
   }, 
 
   clearMessages: function(){
-    $("#chat").empty();
+    $('#chat').empty();
   }, 
 
   addMessage: function(){
-    var message = $('<p></p>');
+    var message = $('<p class=message></p>');
+
+    $('#chat').append(message);
   },
 
   fetch: function(callback = ()=>{}) {
