@@ -16,7 +16,7 @@ var App = {
     App.fetch(App.stopSpinner);
 
     $('#chats').on('click', '.username', function(){
-      Friends.toggleFriend();
+      Friends.toggleStatus();
     });
   },
 
