@@ -9,6 +9,9 @@ var FormView = {
   handleSubmit: function(event) {
     event.preventDefault();
     Parse.create({username: App.username, text: $('#message')[0].value, roomname: $('option:selected').text()});
+    // setTimeout(function(){
+    //   location.reload()
+    // }, 100);
   },
 
   setStatus: function(active) {
