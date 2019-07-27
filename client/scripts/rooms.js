@@ -1,5 +1,6 @@
 var Rooms = {
   add: function(){
-    prompt("Please enter a room!");
+    var info = prompt("Please enter a room!");
+    RoomsView.renderRoom(info);
   }
 };
