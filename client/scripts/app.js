@@ -21,7 +21,10 @@ var App = {
     Parse.readAll((data) => {
       // examine the response from the server request:
       console.log(data);
-
+      data.results.forEach(item => {
+        var msg = MessageView.render({username: item.username, text: item.text, roomname: item.roomname})
+        $('#chats').append(msg);
+      });
       callback();
     });
   },
