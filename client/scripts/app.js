@@ -15,20 +15,10 @@ var App = {
     App.startSpinner();
     App.fetch(App.stopSpinner);
 
-    // setInterval(App.fetch(), 3000);
-  },
-
-  toggleFriend: function(){
-    $('#chats').on('click', '.username', function(event){
-      var username = $(this).text();
-      if (!Friends[username]){
-        Friends[username] = username;
-      }else{
-        delete Friends[username];
-      }
-      console.log(Friends);
+    $('#chats').on('click', '.username', function(){
+      Friends.toggleFriend();
     });
-  }, 
+  },
 
   fetch: function(callback = ()=>{}) {
     Parse.readAll((data) => {
