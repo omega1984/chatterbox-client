@@ -1,8 +1,9 @@
 var Friends = {
     friendList: {},
     toggleStatus: function(){
+        // username is not defined;
         var username;
-        $('#chats').on('click', '.username', function(){
+        $('#chats').on('click', '.username', function(event){
             username = $(this).text();
         });
         if (!Friends.friendList[username]){

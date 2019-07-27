@@ -18,6 +18,9 @@ var App = {
     $('#chats').on('click', '.username', function(){
       Friends.toggleStatus();
     });
+    $('button').on('click', function(){
+      Rooms.add();
+    });
   },
 
   fetch: function(callback = ()=>{}) {

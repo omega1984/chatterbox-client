@@ -1,3 +1,5 @@
 var Rooms = {
-    room: []
+  add: function(){
+    prompt("Please enter a room!");
+  }
 };
