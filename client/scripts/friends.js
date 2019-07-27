@@ -1,11 +1,15 @@
 var Friends = {
+    friendList: {},
     toggleStatus: function(){
-        // var username = $(this).text();
-        // if (!Friends[username]){
-        //     Friends[username] = username;
-        // }else{
-        //     delete Friends[username];
-        // }
-        // console.log(Friends);
-      }
+        var username;
+        $('#chats').on('click', '.username', function(){
+            username = $(this).text();
+        });
+        if (!Friends.friendList[username]){
+            Friends.friendList[username] = username;
+        }else{
+            delete Friends.friendList[username];
+        }
+        console.log(Friends.friendList);
+    }
 };
