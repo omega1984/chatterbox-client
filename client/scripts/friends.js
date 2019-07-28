@@ -1,5 +1,5 @@
 var Friends = {
-    friendList: {},
+    // friendList: {},
     toggleStatus: function(){
     //     $('#chats').on('click', '.username', function(event){
     //         var username = $(this).text();
@@ -11,15 +11,13 @@ var Friends = {
     //     });
     //     console.log(Friends.friendList);
     // }
-
-        $('#chats').on('click', '.username', function(event){
-            var username = $(this).text();
-            var $friend = $('<span>' + " @" + username + "@ " + '</span>');
-            $friend.toggleClass(username);
-            $friend.appendTo('.friend');
-            // hide all tags that don't have newFriend class
-            $('.friend').not('span:contains("' + username + '")').children().hide();
-            $('span[class="' + username + '"]').show();
-        });
+        
+        var username = App.name;  
+        var $friend = $('<span>' + " @" + username + "@ " + '</span>');
+        // hide all tags that don't have newFriend class
+        $('.friend').not('div:contains("newFriend")').children().hide();
+        $friend.toggleClass('newFriend');
+        $friend.appendTo('.friend');
+        $('span[class="newFriend"]').show();
     }
 };

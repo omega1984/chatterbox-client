@@ -15,7 +15,10 @@ var App = {
     App.startSpinner();
     App.fetch(App.stopSpinner);
 
+    name;  // global variable for friend list
+
     $('#chats').on('click', '.username', function(){
+      App.name = $(this).text();
       Friends.toggleStatus();
     });
     $('button').on('click', function(){
