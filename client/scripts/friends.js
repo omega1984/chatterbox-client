@@ -14,10 +14,12 @@ var Friends = {
 
         $('#chats').on('click', '.username', function(event){
             var username = $(this).text();
-            var $friend = $('<span>' + username + '</span>');
+            var $friend = $('<span>' + " @" + username + "@ " + '</span>');
             $friend.toggleClass('newFriend');
             $friend.appendTo('.friend');
             // hide all tags that don't have newFriend class
+            $('span').not('span:contains("newFriend")').hide();
+            $('span[class="newFriend"]').show();
         });
     }
 };

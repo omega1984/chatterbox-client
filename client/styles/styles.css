@@ -93,3 +93,7 @@ form input[type=text] {
 h4 {
     text-align: center;
 }
+
+.newFriend {
+    display: inline;
+}
