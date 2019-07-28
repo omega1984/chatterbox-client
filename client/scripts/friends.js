@@ -1,5 +1,5 @@
 var Friends = {
-    // friendList: {},
+    friendList: {},
     toggleStatus: function(){
     //     $('#chats').on('click', '.username', function(event){
     //         var username = $(this).text();
