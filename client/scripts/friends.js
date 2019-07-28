@@ -15,11 +15,11 @@ var Friends = {
         $('#chats').on('click', '.username', function(event){
             var username = $(this).text();
             var $friend = $('<span>' + " @" + username + "@ " + '</span>');
-            $friend.toggleClass('newFriend');
+            $friend.toggleClass(username);
             $friend.appendTo('.friend');
             // hide all tags that don't have newFriend class
-            $('span').not('span:contains("newFriend")').hide();
-            $('span[class="newFriend"]').show();
+            $('.friend').not('span:contains("' + username + '")').children().hide();
+            $('span[class="' + username + '"]').show();
         });
     }
 };
