@@ -31,6 +31,13 @@ var App = {
         var msg = MessageView.render({username: item.username, text: item.text, roomname: item.roomname});
         $('#chats').append(msg);
       });
+      // retrieve roomname from data and push them into roomNames array
+      var roomNames = [];
+      data.results.forEach(item => {
+        if (item.roomname) roomNames.push(item.roomname);
+      });
+      // filter out duplicated roomnames and push the rest into html body
+      Array.from(new Set(roomNames)).forEach(room => RoomsView.renderRoom(room));
       callback();
     });
   },

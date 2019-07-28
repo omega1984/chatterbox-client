@@ -15,9 +15,9 @@ var Friends = {
         $('#chats').on('click', '.username', function(event){
             var username = $(this).text();
             var $friend = $('<span>' + username + '</span>');
-            $friend.toggleClass(username);
+            $friend.toggleClass('newFriend');
             $friend.appendTo('.friend');
-            $('span[class="' + username + '"]').parent().show();
-        })
+            // hide all tags that don't have newFriend class
+        });
     }
 };
