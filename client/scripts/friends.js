@@ -13,13 +13,13 @@ var Friends = {
     // }
         
         var username = App.name;
-        $('span[data-user="' + username + '"]').removeClass('newFriend');
+        $('span[data-user="' + username + '"]').remove();
         var $friend = $('<span>' + " @" + username + "@ " + '</span>');
         // add a class and attribute to the span we just created
         $friend.addClass('newFriend').attr('data-user', username);
         $friend.appendTo('.friend');
         // hide all tags that don't have newFriend class
-        $('.friend').not('span:contains("newFriend")').children().hide();
-        $('span[class="newFriend"]').show();
+        // $('.friend').not('span:contains("newFriend")').children().hide();
+        // $('span[class="newFriend"]').show();
     }
 };

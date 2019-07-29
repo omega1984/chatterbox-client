@@ -24,6 +24,9 @@ var App = {
     $('button').on('click', function(){
       Rooms.add();
     });
+    $('.friend').on('click', '.newFriend', () =>{
+      $('span[data-user="' + App.name + '"]').remove();
+    });
   },
 
   fetch: function(callback = ()=>{}) {
