@@ -12,6 +12,7 @@ var FormView = {
     // setTimeout(function(){
     //   location.reload()
     // }, 100);
+    $('#message').val('');
   },
 
   setStatus: function(active) {
